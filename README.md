@@ -5,7 +5,27 @@
 #### By _**Olha Wysocky and Yulia Shidlovskaya**_
 
 ## Description
-__
+
+_A website that allows users to post ideas for projects, products, or charitable acts, and to request funding._
+
+## Specifications
+
+* As a user, I want to see categories: ideas, projects, and charitable acts that are seeking funding.
+* As a user, I want to select a category to view a page containing all projects in that category.
+* As a user, I want to click a project to see more details: 
+ - name
+ - project starters/managers
+ - description
+ - amount of money the project is hoping to raise
+ - amount of money already risen
+* As a user, I want to be able to filter projects as I browse them. Perhaps by the amount of funding they still require.
+* As a user, I want to click a button or fill out a form to fund a project.
+* As a user, I want the option to post my own project or charitable act that seeks funding.
+
+Further features:
+* As an administrator, I want to add, update, or delete projects as necessary. (User authentication is not required).
+* Things like charitable acts might have different types of properties/details than companies seeking startup funding, too.
+
 
 ## Known Bugs
 _No known bugs._
