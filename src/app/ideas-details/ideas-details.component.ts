@@ -23,7 +23,9 @@ export class IdeasDetailsComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
      this.ideaId = urlParameters['id'];
    });
+   
    this.ideaToDisplay = this.ideaService.getIdeaById(this.ideaId);
+   console.log(ideaToDisplay);
   }
 
 }

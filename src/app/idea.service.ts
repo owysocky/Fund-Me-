@@ -16,7 +16,7 @@ export class IdeaService {
   }
   
   getIdeaById(ideaId: string){
-    return this.database.object('ideas' + ideaId);
+    return this.database.object('ideas/' + ideaId);
   }
   
   // getIdeasByCategory(desiredCategory: string){

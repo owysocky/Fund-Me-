@@ -19,17 +19,17 @@ _A website that allows users to post ideas for projects, products, or charitable
  - description
  - amount of money the project is hoping to raise
  - amount of money already risen
+
+Further features:
 * As a user, I want to be able to filter projects as I browse them. Perhaps by the amount of funding they still require.
 * As a user, I want to click a button or fill out a form to fund a project.
 * As a user, I want the option to post my own project or charitable act that seeks funding.
-
-Further features:
 * As an administrator, I want to add, update, or delete projects as necessary. (User authentication is not required).
 * Things like charitable acts might have different types of properties/details than companies seeking startup funding, too.
 
 
 ## Known Bugs
-_No known bugs._
+_Project details are not showing._
 
 ## Installation Requirements
 * _Download and install Node.js_

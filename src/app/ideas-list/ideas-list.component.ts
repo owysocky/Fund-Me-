@@ -24,15 +24,12 @@ export class IdeasListComponent implements OnInit {
      
     this.ideaService.getIdeas().subscribe(dataLastEmittedFromObserver => {
       let category = this.router.url.substring(1);
-      console.log(category);
-      console.log(dataLastEmittedFromObserver.length);
       for (let i = 0; i < dataLastEmittedFromObserver.length; i++) {
         if((dataLastEmittedFromObserver[i].category === category) || (category === 'list')){
           let currentIdea = new Idea(dataLastEmittedFromObserver[i].name, dataLastEmittedFromObserver[i].category, dataLastEmittedFromObserver[i].userName, dataLastEmittedFromObserver[i].description, dataLastEmittedFromObserver[i].moneyExpected);
           currentIdea.moneyRisen = dataLastEmittedFromObserver[i].moneyRisen;
           currentIdea.id = dataLastEmittedFromObserver[i].$key;
           this.ideas.push(currentIdea);
-          console.log(currentIdea);
         }
       }
     });  
