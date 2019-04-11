@@ -15,6 +15,10 @@ export class IdeaService {
     return this.ideas;
   }
   
+  getIdeaById(ideaId: string){
+    return this.database.object('ideas' + ideaId);
+  }
+  
   // getIdeasByCategory(desiredCategory: string){
   //   var output FirebaseListObservable<any[]>;
   //   console.log(desiredCategory);

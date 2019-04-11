@@ -15,6 +15,10 @@ const appRoutes: Routes = [
   {
     path: 'animals',
     component: IdeasListComponent
+  },
+  {
+    path: 'ideas/:id',
+    component: IdeasListComponent
   }
 ];
 
