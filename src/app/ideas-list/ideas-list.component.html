@@ -1,3 +1,5 @@
-<p>
-  ideas-list works!
-</p>
+<div *ngFor="let idea of ideas | async" (click)="goToDetailPage(idea)">
+  <div>
+    <p><em>{{idea.name}}</em> by {{idea.userName}}, {{idea.moneyRisen}} out of {{idea.moneyExpected}}</p>
+  </div>
+</div>

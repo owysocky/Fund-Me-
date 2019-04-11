@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IdeaService } from '../idea.service';
 import { Idea } from '../models/idea.model';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-ideas-list',
@@ -10,7 +11,8 @@ import { Idea } from '../models/idea.model';
 })
 export class IdeasListComponent implements OnInit {
   
-  ideas: Idea[];
+  ideas: FirebaseListObservable<any[]>;
+
   constructor(private ideaService: IdeaService) { }
 
   ngOnInit() {
