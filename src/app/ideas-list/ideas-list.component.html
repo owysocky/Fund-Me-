@@ -1,7 +1,9 @@
 <h2>All ideas</h2>
 
-<div *ngFor="let idea of ideas | async" (click)="goToDetailPage(idea)">
-  <div>
-    <p><em>{{idea.name}}</em> by {{idea.userName}}, {{idea.moneyRisen}} out of {{idea.moneyExpected}}</p>
+<div *ngIf="currentRoute === '/list'">
+  <div *ngFor="let idea of ideas | async | category:filterByCurrentCategory" (click)="goToDetailPage(idea)">
+    <div>
+      <p><em>{{idea.name}}</em> by {{idea.userName}}, {{idea.moneyRisen}} out of {{idea.moneyExpected}}</p>
+    </div>
   </div>
 </div>

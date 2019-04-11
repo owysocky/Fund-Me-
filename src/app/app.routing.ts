@@ -11,6 +11,10 @@ const appRoutes: Routes = [
   {
     path: 'list',
     component: IdeasListComponent
+  },
+  {
+    path: 'animals',
+    component: IdeasListComponent
   }
 ];
 
