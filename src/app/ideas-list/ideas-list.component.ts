@@ -28,13 +28,12 @@ export class IdeasListComponent implements OnInit {
       console.log(dataLastEmittedFromObserver.length);
       for (let i = 0; i < dataLastEmittedFromObserver.length; i++) {
         
-  
-      if((dataLastEmittedFromObserver[i].category === category) || (category === 'list')){
-        let currentIdea = new Idea(dataLastEmittedFromObserver[i].name, dataLastEmittedFromObserver[i].category, dataLastEmittedFromObserver[i].userName, dataLastEmittedFromObserver[i].description, dataLastEmittedFromObserver[i].moneyExpected);
-        currentIdea.moneyRisen = dataLastEmittedFromObserver[i].moneyRisen;
-        this.ideas.push(currentIdea);
-        console.log(currentIdea);
-      }
+        if((dataLastEmittedFromObserver[i].category === category) || (category === 'list')){
+          let currentIdea = new Idea(dataLastEmittedFromObserver[i].name, dataLastEmittedFromObserver[i].category, dataLastEmittedFromObserver[i].userName, dataLastEmittedFromObserver[i].description, dataLastEmittedFromObserver[i].moneyExpected);
+          currentIdea.moneyRisen = dataLastEmittedFromObserver[i].moneyRisen;
+          this.ideas.push(currentIdea);
+          console.log(currentIdea);
+        }
       }
     });  
     // this.ideaService.getIdeasByCategory(this.router.url.substring(1)).subscribe(dataLastEmittedFromObserver => {

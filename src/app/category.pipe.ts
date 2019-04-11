@@ -8,19 +8,19 @@ import { FirebaseListObservable } from 'angularfire2/database';
   pure: false
 })
 
-export class CategoryPipe implements PipeTransform {
-  transform(input: FirebaseListObservable<any[]>, desiredCategory) {
-    var output: Idea[] = [];
-    
-    if (desiredCategory !== "list"){
-      for (var i = 0; i < input.length; i++) {
-        if (input[i].category === desiredCategory) {
-          output.push(input[i]);
-        }
-      }
-    } else {
-      return input;
-    }
-    return output;
-  }
+export class CategoryPipe{//} implements PipeTransform {
+  // transform(input: FirebaseListObservable<any[]>, desiredCategory) {
+  //   var output: Idea[] = [];
+  // 
+  //   if (desiredCategory !== "list"){
+  //     for (var i = 0; i < input.length; i++) {
+  //       if (input[i].category === desiredCategory) {
+  //         output.push(input[i]);
+  //       }
+  //     }
+  //   } else {
+  //     return input;
+  //   }
+  //   return output;
+  // }
 }
