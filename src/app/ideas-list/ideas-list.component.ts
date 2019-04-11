@@ -11,15 +11,37 @@ import { Router } from '@angular/router';
   providers: [IdeaService]
 })
 export class IdeasListComponent implements OnInit {
-  filterByCurrentCategory: string = this.router.url.substring(1, this.router.url.length - 1);
-  ideas: FirebaseListObservable<any[]>;
+  //filterByCurrentCategory: string = this.router.url.substring(1, this.router.url.length - 1);
+  // ideas: FirebaseListObservable<any[]>;
+  ideas: Idea[] = [];
 
   constructor(private router: Router, private ideaService: IdeaService) { 
     //console.log(currentRoute);
   }
 
   ngOnInit() {
-    this.ideas = this.ideaService.getIdeas();
+    // this.ideas = this.ideaService.getIdeas();
+     
+    this.ideaService.getIdeas().subscribe(dataLastEmittedFromObserver => {
+      let category = this.router.url.substring(1);
+      console.log(category);
+      console.log(dataLastEmittedFromObserver.length);
+      for (let i = 0; i < dataLastEmittedFromObserver.length; i++) {
+        
+  
+      if((dataLastEmittedFromObserver[i].category === category) || (category === 'list')){
+        let currentIdea = new Idea(dataLastEmittedFromObserver[i].name, dataLastEmittedFromObserver[i].category, dataLastEmittedFromObserver[i].userName, dataLastEmittedFromObserver[i].description, dataLastEmittedFromObserver[i].moneyExpected);
+        currentIdea.moneyRisen = dataLastEmittedFromObserver[i].moneyRisen;
+        this.ideas.push(currentIdea);
+        console.log(currentIdea);
+      }
+      }
+    });  
+    // this.ideaService.getIdeasByCategory(this.router.url.substring(1)).subscribe(dataLastEmittedFromObserver => {
+    //   this.ideas.push() = dataLastEmittedFromObserver;
+    //   console.log(this.ideas);
+    // });
+    
     //console.log(currentRoute);
   }
   

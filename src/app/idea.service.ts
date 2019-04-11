@@ -14,4 +14,20 @@ export class IdeaService {
   getIdeas(){
     return this.ideas;
   }
+  
+  // getIdeasByCategory(desiredCategory: string){
+  //   var output FirebaseListObservable<any[]>;
+  //   console.log(desiredCategory);
+  //   if (desiredCategory !== "list"){
+  //     for (var i = 0; i < this.ideas.length; i++) {
+  //       if (this.ideas[i].id === category) {
+  //         output.push(this.ideas[i]);
+  //       }
+  //     }
+  //   } else {
+  //     return this.ideas;
+  //   }
+  //   return output;
+  // }
+
 }
