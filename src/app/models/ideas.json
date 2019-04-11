@@ -1,0 +1,18 @@
+{"ideas" : [
+  {
+    "name": "Help Chipala Build A Classroom!", 
+    "category": "education", 
+    "userName": "Olya", 
+    "description": "There are only 39 classrooms on campus - 17 of which are outside. Indoor classrooms can range between $15k-30k, but if we can get to $5k, we could put a substantial dent in the funds needed to build another classroom. This money can also go towards some more mobile chalkboards that can better withstand the outdoor conditions.",
+    "moneyExpected": 15000,
+    "moneyRisen": 10000
+  },
+  {
+    "name": "Cow Rescue Hawaii by HLFARN", 
+    "category": "animals", 
+    "userName": "Bob", 
+    "description": "As  many of you already may know, a big-scale dairy farm on Hawaii Island is shutting down within a month. This means we have a month to save as many cows as we possibly can from slaughter. About 2800 female cows of various ages will be heading to slaughter soon. All of them are for sale at the moment. We will try to buy as many as possible to save their precious lives.",
+    "moneyExpected": 50000,
+    "moneyRisen": 37150
+  }]
+}

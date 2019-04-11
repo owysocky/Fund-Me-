@@ -10,7 +10,8 @@ _A website that allows users to post ideas for projects, products, or charitable
 
 ## Specifications
 
-* As a user, I want to see categories: ideas, projects, and charitable acts that are seeking funding.
+* As a user, I want to see all fundrusing ideas
+* As a user, I want to see categories: products, projects, and charitable acts that are seeking funding.
 * As a user, I want to select a category to view a page containing all projects in that category.
 * As a user, I want to click a project to see more details: 
  - name
